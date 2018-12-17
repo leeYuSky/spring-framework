@@ -45,6 +45,7 @@ public class ClassRelativeResourceLoader extends DefaultResourceLoader {
 
 	@Override
 	protected Resource getResourceByPath(String path) {
+		// ClassRelativeResourceLoader 扩展的功能是，可以根据给定的 class 所在包或者所在包的子包下加载资源。
 		return new ClassRelativeContextResource(path, this.clazz);
 	}
 
